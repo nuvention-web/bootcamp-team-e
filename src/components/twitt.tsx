@@ -50,7 +50,7 @@ export const Twitt = (props: Props) => {
             <Caption>{props.date}</Caption>
           </View>
           <Text style={{ color: contentColor }}>{props.content}</Text>
-          <Image
+          {props.image != "" && <Image
             source={{ uri: props.image }}
             style={[
               styles.image,
@@ -58,38 +58,8 @@ export const Twitt = (props: Props) => {
                 borderColor: imageBorderColor,
               },
             ]}
-          />
+          />}
           <View style={styles.bottomRow}>
-            <TouchableOpacity
-              onPress={() => {}}
-              hitSlop={{ top: 10, bottom: 10 }}
-            >
-              <View style={styles.iconContainer}>
-                <MaterialCommunityIcons
-                  name="comment-outline"
-                  size={12}
-                  color={iconColor}
-                />
-                <Caption style={styles.iconDescription}>
-                  {props.comments}
-                </Caption>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => {}}
-              hitSlop={{ top: 10, bottom: 10 }}
-            >
-              <View style={styles.iconContainer}>
-                <MaterialCommunityIcons
-                  name="share-outline"
-                  size={14}
-                  color={iconColor}
-                />
-                <Caption style={styles.iconDescription}>
-                  {props.retweets}
-                </Caption>
-              </View>
-            </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {}}
               hitSlop={{ top: 10, bottom: 10 }}

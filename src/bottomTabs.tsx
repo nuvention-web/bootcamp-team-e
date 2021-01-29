@@ -53,26 +53,18 @@ export const BottomTabs = (props: Props) => {
         sceneAnimationEnabled={false}
       >
         <Tab.Screen
-          name="Feed"
+          name="Questions"
           component={Feed}
           options={{
-            tabBarIcon: 'home-account',
+            tabBarIcon: 'help',
             tabBarColor,
           }}
         />
         <Tab.Screen
-          name="Notifications"
+          name="Stats"
           component={Notifications}
           options={{
-            tabBarIcon: 'bell-outline',
-            tabBarColor,
-          }}
-        />
-        <Tab.Screen
-          name="Messages"
-          component={Message}
-          options={{
-            tabBarIcon: 'message-text-outline',
+            tabBarIcon: 'poll',
             tabBarColor,
           }}
         />

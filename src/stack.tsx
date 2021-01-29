@@ -38,41 +38,15 @@ export const StackNavigator = () => {
                   onPress={navigation.goBack}
                   color={theme.colors.primary}
                 />
-              ) : (
-                <TouchableOpacity
-                  style={{ marginLeft: 10 }}
-                  onPress={() => {
-                    ((navigation as any) as DrawerNavigationProp<{}>).openDrawer();
-                  }}
-                >
-                  <Avatar.Image
-                    size={40}
-                    source={{
-                      uri:
-                        'https://pbs.twimg.com/profile_images/952545910990495744/b59hSXUd_400x400.jpg',
-                    }}
-                  />
-                </TouchableOpacity>
-              )}
-              <Appbar.Content
-                title={
-                  title === 'Feed' ? (
-                    <MaterialCommunityIcons
-                      style={{ marginRight: 10 }}
-                      name="twitter"
-                      size={40}
-                      color={theme.colors.primary}
-                    />
-                  ) : (
-                    title
-                  )
-                }
-                titleStyle={{
-                  fontSize: 18,
-                  fontWeight: 'bold',
-                  color: theme.colors.primary,
+              ) : (<Avatar.Image
+                size={200}
+                source={{
+                  uri:
+                    'https://i.imgur.com/PnTHIfS.png',
                 }}
-              />
+                style={{backgroundColor: "transparent"}}
+              />)}
+              
             </Appbar.Header>
           );
         },

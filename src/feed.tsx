@@ -11,10 +11,13 @@ import { StackNavigatorParamlist } from './types';
 type TwittProps = React.ComponentProps<typeof Twitt>;
 
 function renderItem({ item }: { item: TwittProps }) {
+  item.name = item.name + " " + item.id;
+  //console.log(item.name);
   return <Twitt {...item} />;
 }
 
 function keyExtractor(item: TwittProps) {
+  //console.log(item.id.toString());
   return item.id.toString();
 }
 
